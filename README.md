@@ -2,6 +2,8 @@
 
 A five-question Python multiple-choice quiz. The browser displays the questions; Flask on the server checks the selected answers and returns a score out of five.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https%3A%2F%2Fgithub.com%2Ftranvanhoang73%2Fcodexpractice)
+
 ## Run locally
 
 ```powershell
