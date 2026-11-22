@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trắc nghiệm Python</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #172033;
+      background: #f1f5fb;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 36px 16px; }
+    main { max-width: 760px; margin: 0 auto; }
+    header { margin-bottom: 24px; }
+    .eyebrow { color: #5868d8; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: .78rem; }
+    h1 { margin: 8px 0; font-size: clamp(1.8rem, 5vw, 2.5rem); }
+    header p { color: #5d667a; margin: 0; }
+    .question {
+      background: #fff;
+      border: 1px solid #e0e6f0;
+      border-radius: 16px;
+      padding: 20px;
+      margin: 14px 0;
+      box-shadow: 0 5px 18px #26385c0a;
+    }
+    .question h2 { font-size: 1.05rem; margin: 0 0 14px; line-height: 1.5; }
+    .number { color: #5868d8; margin-right: 6px; }
+    .option {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 12px;
+      margin: 6px 0;
+      border: 1px solid #e4e9f2;
+      border-radius: 10px;
+      cursor: pointer;
+      line-height: 1.45;
+    }
+    .option:hover { background: #f6f7ff; border-color: #c8cdfb; }
+    .option input { margin-top: 4px; accent-color: #5868d8; }
+    .actions { display: flex; align-items: center; gap: 16px; margin: 22px 0; }
+    button {
+      border: 0; border-radius: 10px; padding: 12px 20px;
+      background: #5868d8; color: #fff; font: inherit; font-weight: 700; cursor: pointer;
+    }
+    button:hover { background: #4655c5; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #aeb6ff; outline-offset: 2px; }
+    #result { font-size: 1.1rem; font-weight: 700; }
+    #result[hidden] { display: none; }
+    @media (max-width: 520px) { body { padding: 24px 12px; } .question { padding: 16px; } .actions { align-items: flex-start; flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Bài kiểm tra nhanh</div>
+      <h1>Trắc nghiệm Python</h1>
+      <p>5 câu hỏi · Mỗi câu đúng được 1 điểm · Tổng điểm tối đa: 5</p>
+    </header>
+
+    <form id="quiz">
+      <section class="question" aria-labelledby="q1-title">
+        <h2 id="q1-title"><span class="number">Câu 1.</span> Từ khóa nào dùng để định nghĩa một hàm trong Python?</h2>
+        <label class="option"><input type="radio" name="q1" value="a"> <span><code>function</code></span></label>
+        <label class="option"><input type="radio" name="q1" value="b"> <span><code>def</code></span></label>
+        <label class="option"><input type="radio" name="q1" value="c"> <span><code>fun</code></span></label>
+        <label class="option"><input type="radio" name="q1" value="d"> <span><code>define</code></span></label>
+      </section>
+
+      <section class="question" aria-labelledby="q2-title">
+        <h2 id="q2-title"><span class="number">Câu 2.</span> Kiểu dữ liệu của giá trị <code>"Python"</code> là gì?</h2>
+        <label class="option"><input type="radio" name="q2" value="a"> <span><code>int</code></span></label>
+        <label class="option"><input type="radio" name="q2" value="b"> <span><code>bool</code></span></label>
+        <label class="option"><input type="radio" name="q2" value="c"> <span><code>str</code></span></label>
+        <label class="option"><input type="radio" name="q2" value="d"> <span><code>list</code></span></label>
+      </section>
+
+      <section class="question" aria-labelledby="q3-title">
+        <h2 id="q3-title"><span class="number">Câu 3.</span> Kết quả của biểu thức <code>3 ** 2</code> là bao nhiêu?</h2>
+        <label class="option"><input type="radio" name="q3" value="a"> <span>6</span></label>
+        <label class="option"><input type="radio" name="q3" value="b"> <span>8</span></label>
+        <label class="option"><input type="radio" name="q3" value="c"> <span>9</span></label>
+        <label class="option"><input type="radio" name="q3" value="d"> <span>32</span></label>
+      </section>
+
+      <section class="question" aria-labelledby="q4-title">
+        <h2 id="q4-title"><span class="number">Câu 4.</span> Phương thức nào thêm một phần tử vào cuối danh sách?</h2>
+        <label class="option"><input type="radio" name="q4" value="a"> <span><code>append()</code></span></label>
+        <label class="option"><input type="radio" name="q4" value="b"> <span><code>add()</code></span></label>
+        <label class="option"><input type="radio" name="q4" value="c"> <span><code>push()</code></span></label>
+        <label class="option"><input type="radio" name="q4" value="d"> <span><code>insert_end()</code></span></label>
+      </section>
+
+      <section class="question" aria-labelledby="q5-title">
+        <h2 id="q5-title"><span class="number">Câu 5.</span> Vòng lặp nào thường dùng để lặp qua các phần tử của một danh sách?</h2>
+        <label class="option"><input type="radio" name="q5" value="a"> <span><code>repeat</code></span></label>
+        <label class="option"><input type="radio" name="q5" value="b"> <span><code>for</code></span></label>
+        <label class="option"><input type="radio" name="q5" value="c"> <span><code>loop</code></span></label>
+        <label class="option"><input type="radio" name="q5" value="d"> <span><code>each</code></span></label>
+      </section>
+
+      <div class="actions">
+        <button type="submit">Kết thúc bài thi</button>
+        <output id="result" aria-live="polite" hidden></output>
+      </div>
+    </form>
+  </main>
+  <script>
+    const quiz = document.querySelector("#quiz");
+    const result = document.querySelector("#result");
+
+    quiz.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      result.hidden = false;
+      result.textContent = "Đang chấm điểm...";
+      const selections = Object.fromEntries(new FormData(quiz).entries());
+      try {
+        const response = await fetch("/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(selections),
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Không gửi được bài thi.");
+        result.textContent = data.message;
+      } catch (error) {
+        result.textContent = error.message || "Không kết nối được máy chủ.";
+      }
+    });
+  </script>
+</body>
+</html>
